@@ -1,5 +1,5 @@
 characters = {
-
+" ": 0,
 }
 
 with open("books/frankenstein.txt") as f:
@@ -8,6 +8,10 @@ with open("books/frankenstein.txt") as f:
 
 word_count = len(file_contents.split())
 words = file_contents.split()
+
+for i in file_contents:
+    if i == " ":
+        characters[" "] += 1
 
 for i in words:
     for j in i:
