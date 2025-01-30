@@ -27,7 +27,7 @@ character_list.sort(key=lambda x: x[1], reverse=True)
 
 print("--- Begin report of books/frankenstein.txt ---")
 
-print(f"{word_count} words found in the document")
+print(f"{word_count} words found in the document\n")
 
 for i in character_list:
     (letter, amount) = i
