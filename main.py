@@ -21,5 +21,17 @@ for i in words:
         else:
             characters[j] = 1
 
-print(word_count)
-print(characters)
+character_list = list(characters.items())
+
+character_list.sort(key=lambda x: x[1], reverse=True)
+
+print("--- Begin report of books/frankenstein.txt ---")
+
+print(f"{word_count} words found in the document")
+
+for i in character_list:
+    (letter, amount) = i
+    if letter.isalpha():
+        print(f"The \'{letter}\' character was found {amount} times")
+
+print("--- End report ---")
